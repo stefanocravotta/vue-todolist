@@ -40,11 +40,12 @@ const app = new Vue({
   },
   methods: {
     removeTodo(index){
+      if(confirm('Sei sicuro di voler eliminare?'))
       this.toDos.splice(index,1)
+
     },
     addTodo(){
       this.toDos.push(this.nuovoTodo);
-
     }
   },
 })
