@@ -30,11 +30,21 @@ const app = new Vue({
         text: 'Fare allenamento',
         done : false
       },
+    ],
+    nuovoTodo:[
+      {
+        text : "",
+        done : false
+      }
     ]
   },
   methods: {
     removeTodo(index){
       this.toDos.splice(index,1)
+    },
+    addTodo(){
+      this.toDos.push(this.nuovoTodo);
+
     }
   },
 })
