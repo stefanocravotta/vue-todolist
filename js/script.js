@@ -17,6 +17,19 @@ const app = new Vue({
 
   data: {
 
-    
-  }
+    toDos:[
+      {
+        text: 'Fare la spesa',
+        done : false
+      },
+      {
+        text: 'Suonare la chitarra',
+        done : false
+      },
+      {
+        text: 'Fare allenamento',
+        done : false
+      },
+    ]
+  },
 })
