@@ -20,9 +20,9 @@
       </div>
 
       <ul>
-        <li v-for="toDo in toDos">
-          <span @click="toDo.done = !toDo.done" :class="!toDo.done ? 'sbarrato' : ''">{{toDo.text}}</span>
-          <i class="fa-solid fa-x"></i>
+        <li @click="toDo.done = !toDo.done"  v-for="(toDo,index) in toDos">
+          <span :class="!toDo.done ? 'sbarrato' : ''">{{toDo.text}}</span>
+          <i @click="removeTodo()" class="fa-solid fa-x"></i>
         </li>
       </ul>
     </div>
