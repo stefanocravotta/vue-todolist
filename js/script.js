@@ -31,12 +31,7 @@ const app = new Vue({
         done : false
       },
     ],
-    nuovoTodo:[
-      {
-        text : "",
-        done : false
-      }
-    ]
+    nuovoTodo: "",
   },
   methods: {
     removeTodo(index){
@@ -45,7 +40,11 @@ const app = new Vue({
 
     },
     addTodo(){
-      this.toDos.push(this.nuovoTodo);
+      const newTodoPush = {
+        text: this.nuovoTodo,
+        done:false
+      }
+      this.toDos.push(newTodoPush);
     }
   },
 })
